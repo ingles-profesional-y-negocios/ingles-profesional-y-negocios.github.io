@@ -24,7 +24,7 @@
 <body>
 		<script>
 			userLang= (navigator.language || navigator.userLanguage || "en").replace(/-.*/,'');
-			quiereEs= userLang=="es" || window.location.href.match(/\?es/);
+			quiereEs= (userLang=="es" && !window.location.href.match(/\?en/)) || window.location.href.match(/\?es/);
     	if (quiereEs && !window.location.pathname.match(/\.es\./)) { //A: quiere es	pero no esta
 				page= window.location.pathname; if (page.match(/\/$/)) { page+="index.html" }
 				page_es= page.replace(/\.html$/,'.es.html');
@@ -67,36 +67,36 @@
 
                 <div class="carousel-inner" role="listbox">
 
-                    <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(http://www2.pictures.zimbio.com/gi/Queen+Elizabeth+II+Queen+Elizabeth+II+Birthday+ddypg0awWZel.jpg);">
+                    <div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/queen.jpg);">
                         <div class="container container-slide">
                             <div class="image_wrapper">
-                                <div class="mbr-overlay"></div><img src="http://www2.pictures.zimbio.com/gi/Queen+Elizabeth+II+Queen+Elizabeth+II+Birthday+ddypg0awWZel.jpg">
+                                <div class="mbr-overlay"></div><img src="assets/images/queen.jpg">
                                 <div class="carousel-caption justify-content-center">
                                     <div class="col-9 align-center">
-                                        <h2 class="mbr-fonts-style display-1">Is it your dream to sell and work in English?
+                                        <h2 class="mbr-fonts-style display-1">It&#x27;s your dream to sell and work in English?
                                         </h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/slider2-1920x1027.jpg);">
+                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/handshake.jpg);">
                         <div class="container container-slide">
                             <div class="image_wrapper">
-                                <div class="mbr-overlay"></div><img src="assets/images/slider2-1920x1027.jpg">
+                                <div class="mbr-overlay"></div><img src="assets/images/handshake.jpg">
                                 <div class="carousel-caption justify-content-center">
                                     <div class="col-9 align-center">
-                                        <h2 class="mbr-fonts-style display-1">Handle any business situation communicating with confidence.
+                                        <h2 class="mbr-fonts-style display-1">Handle any business situation and communicate with confidence.
                                         </h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/mbr-1920x1278.jpg);">
+                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/workplace.jpg);">
                         <div class="container container-slide">
                             <div class="image_wrapper">
-                                <div class="mbr-overlay"></div><img src="assets/images/mbr-1920x1278.jpg">
+                                <div class="mbr-overlay"></div><img src="assets/images/workplace.jpg">
                                 <div class="carousel-caption justify-content-center">
                                     <div class="col-9 align-center">
                                         <h2 class="mbr-fonts-style display-1">Master a new type of situation every two or three classes.
@@ -106,10 +106,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/mbr-1920x974.jpg);">
+                    <div class="carousel-item slider-fullscreen-image " data-bg-video-slide="false" style="background-image: url(assets/images/london.jpg);">
                         <div class="container container-slide">
                             <div class="image_wrapper">
-                                <div class="mbr-overlay"></div><img src="assets/images/mbr-1920x974.jpg">
+                                <div class="mbr-overlay"></div><img src="assets/images/london.jpg">
                                 <div class="carousel-caption justify-content-center">
                                     <div class="col-9 align-center">
                                         <h2 class="mbr-fonts-style display-1">Become fluent in your written and oral English skills.
@@ -139,7 +139,7 @@
                     <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
                         <div class="panel-item p-3">
                             <div class="card-img pb-3">
-                                <span class="mbr-iconfont mbri-responsive"></span>
+                                <span class="mbr-iconfont mbri-magic-stick"></span>
                             </div>
 
                             <div class="card-text">
@@ -154,7 +154,7 @@
                     <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
                         <div class="panel-item p-3">
                             <div class="card-img pb-3">
-                                <span class="mbr-iconfont mbri-globe"></span>
+                                <span class="mbr-iconfont mbri-help"></span>
                             </div>
 
                             <div class="card-text">
@@ -184,14 +184,14 @@
                     <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
                         <div class="panel-item p-3">
                             <div class="card-img pb-3">
-                                <span class="mbr-iconfont mbri-file"></span>
+                                <span class="mbr-iconfont mbri-growing-chart"></span>
                             </div>
 
                             <div class="card-text">
                                 <h3 class="pt-3 pb-3 mbr-fonts-style display-5">Translation</h3>
 
                                 <p class="mbr-content-text mbr-fonts-style display-7 ">
-                                    of presentations, brochures, mails, etc.
+                                    for professional presentations, brochures, mails, etc.
                                 </p>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                 <div class="card p-3 col-12 col-md-6 my-col">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="assets/images/mbr-464x232.jpg" alt="Sitios responsive" title="">
+                            <img src="assets/images/dialog.png" alt="Sitios responsive" title="">
                         </div>
                         <div class="card-box">
                             <p class="mbr-text mbr-fonts-style display-7">Weekly classes to practice your communication skills.</p>
@@ -255,7 +255,7 @@
                 <div class="card p-3 col-12 col-md-6 my-col">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="assets/images/bootstrap-1-464x232.jpg" alt="Sitios responsive" title="">
+                            <img src="assets/images/email-world.png" alt="Sitios responsive" title="">
                         </div>
                         <div class="card-box">
                             <p class="mbr-text mbr-fonts-style display-7">Send emails to get used to it and improve.</p>
@@ -265,7 +265,7 @@
                 <div class="card p-3 col-12 col-md-6 my-col">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="assets/images/translation-cut-464x232.jpg" alt="Sitios responsive" title="">
+                            <img src="assets/images/computer-screen.jpeg" alt="Sitios responsive" title="">
                         </div>
                         <div class="card-box">
                             <p class="mbr-text mbr-fonts-style display-7">Business situation analysis and phrases to learn.</p>
@@ -275,7 +275,7 @@
                 <div class="card p-3 col-12 col-md-6 my-col">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="assets/images/networking-3-464x310.jpg" alt="Sitios responsive" title="">
+                            <img src="assets/images/list.png" alt="Sitios responsive" title="">
                         </div>
                         <div class="card-box">
                             <p class="mbr-text mbr-fonts-style display-7">Send your daily standup every day and receive feedback to make it even better.</p>
@@ -314,13 +314,13 @@ Text messages and audio exchange at any time of the day. Plus &quot;Quick wins&q
                     <p class="mbr-text">Proofreading
 of presentations, documents, etc.</p>
                     <p class="mbr-text">Translation
-of presentations, brochures, mails, etc.</p>
+for professional presentations, brochures, mails, etc.</p>
                 </div>
 
                 <div class="col col-md-6 mbr-fonts-style display-7">
                     <h5 class="pb-3">Contact us</h5>
                     <p class="mbr-text"><strong>Thanks for your interest!</strong></p>
-                    <p class="mbr-text"><a href="">Linkedin</a></p>
+                    <p class="mbr-text"><a href="https://www.linkedin.com/in/maria-gambarte/">Linkedin</a></p>
                     <p class="mbr-text">Email us: <a href="mailto:m@ingles-profesional-y-negocios.com">m@ingles-profesional-y-negocios.com</a></p>
                     <p class="mbr-text">© Copyright 2019 María Gambarte</p>
                 </div>

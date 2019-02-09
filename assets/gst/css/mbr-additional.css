@@ -1267,6 +1267,12 @@ pre {
 .card-img {
   width: auto;
 }
+
+.card-img img {  /* que queden parejas ej. en how do we work */
+	height: 10em;
+  max-width: 100%;
+}
+
 .menu .navbar.collapsed:not(.beta-menu) {
   flex-direction: column;
   -webkit-flex-direction: column;
